@@ -2,7 +2,7 @@
 $(document).ready(function(){
 	$('#calc').submit(function(){
 		$.ajax({
-			url: '/MyPage/calcualte',
+			url: '/MyPage/calculate',
 			type: 'POST',
 			dataType: 'json',
 			data: $('#calc').serialize(),
@@ -20,11 +20,11 @@ $(document).ready(function(){
 		    		$('#tripDistCost').val(data.tripDistCost);
 		    	}
 		    	else{
-		    		alert('FAILED FAILED FAILED FAILED e');
+		    		alert('FAILED FAILED !!!');
 		    	}
 		    	},
 		        error:function(){
-		        	alert('FAILED FAILED FAILED FAILED ');
+		        	alert('Ops! Something went wrong!');
 		        }
 		});
 		return false;

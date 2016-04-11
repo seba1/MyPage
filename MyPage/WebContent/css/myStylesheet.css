@@ -21,3 +21,32 @@ body {
 	padding: 8px;
 	width: 20%;
 }
+
+.jumbotron {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	color: inherit;
+	background-color: #eee;
+}
+
+.jumbotron {
+	padding-top: 15px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	color: inherit;
+	background-color: #eee;
+}
+
+.jumbotron p {
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: 200;
+}
+
+@media screen and (min-width: 768px) {
+	.jumbotron {
+		padding-top: 15px;
+		padding-bottom: 30px;
+	}
+}

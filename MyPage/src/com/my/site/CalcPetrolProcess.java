@@ -1,6 +1,7 @@
 package com.my.site;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,13 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
+
+//NOTE: Compile using jre 1.7 if uploading to OpenShift.
 /* TODO 
  * 1. Validate if input is numerical/not empty and output error if necessary
  * 2. Error messages
  * 3. First for loop have to be modified so it takes only 0,1,2,4,6,8,10 (if 0 or/and 1 not entered error message)
  * 4. There's section of if's else if's that should be done in better way(add loops and maybe new methods)
  * */
-@WebServlet("/calcualte")
+
+//WebServlet - [do that in web.xml]when user calls this link this java servlet is executed, url-pattern in web.xml should be the same
+//@WebServlet("/calculate")
 public class CalcPetrolProcess  extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -40,7 +45,7 @@ public class CalcPetrolProcess  extends HttpServlet {
     	int count = 0;
     	double[] distnaces = new double[SIZE];
     	double[] totalCost = new double[SIZE];
-    	CalcDistance calc = new CalcDistance(7);
+    	CalcDistance calc = new CalcDistance(5);
     	
     	//this for loop get all values from form
     	for (int i = 0; i < passedElems.length; i++){
@@ -112,6 +117,7 @@ public class CalcPetrolProcess  extends HttpServlet {
     	
     	map.put("isValid", isValid);
     	write(response, map);
+    	//System.out.println("########### HEY ############");
     }
     
     public static String ChckIfZeroAndConvToStr(double value){

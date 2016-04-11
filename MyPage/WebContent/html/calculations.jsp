@@ -76,7 +76,7 @@
 						<td><font size="4">Total Cost</font></td>
 					</tr>
 					<tr>
-						<td>Daily amount of km driven</td>
+						<td>Daily* amount of km driven</td>
 						<td><input placeholder="0" type="text" id="kmPerDay"  name="kmPerDay"></td>
 						<td><input placeholder="0" type="text" id="kmPerDayCost" name="kmPerDayCost" disabled></td>
 					</tr>
@@ -108,6 +108,7 @@
 						</td>
 					</tr>
 				</table>
+				<p><font size="1">*Daily - assuming 5 days per week</font></p>
 			</form>
 
 			<!-- jumbotron div end -->
